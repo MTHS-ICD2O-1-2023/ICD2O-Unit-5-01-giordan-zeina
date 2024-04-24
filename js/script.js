@@ -1,4 +1,4 @@
-// Copyright (c) 2024 Giordan Zeina All rights reserved
+// Copyright (c) 2024 Giordan Zeina. All rights reserved
 //
 // Created by: Giordan Zeina
 // Created on: April 2024
@@ -7,18 +7,22 @@
 "use strict"
 
 const randomNumber = Math.floor(Math.random() * 6) + 1
-console.log(randomNumber)
 
-function enterClicked() {
+function myButtonClicked() {
   // input
-  const numberGuessed = parseInt(document.getElementById("guess").value)
+  const numberGuessed = parseInt(document.getElementById('guess').value)
 
-  // output
+  // process
   if (numberGuessed == randomNumber) {
-    document.getElementById("answer").innerHTML = 'You guessed the correct number! The Number was ' + randomNumber + '!'
+
+    // output
+    document.getElementById('answer').innerHTML = 'You guessed the correct number! The Number Was ' + randomNumber + '!'
   }
 
+  // process
   if (numberGuessed != randomNumber) {
-    document.getElementById("answer").innerHTML = 'You guessed the wrong number, Try again!'
+
+    // output
+    document.getElementById('answer').innerHTML = 'You have guessed the wrong number!'
   }
 }
